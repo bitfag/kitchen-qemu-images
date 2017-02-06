@@ -16,6 +16,8 @@
 
 root = node['image']['mountpoint']
 
+execute "apt-get update"
+
 package 'debootstrap' do
   action :install
 end
