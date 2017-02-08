@@ -12,6 +12,15 @@ See [kitchen-qemu][driver] for installation instructions and
 download pre-built images from [here][images].
 
 
+How it works
+------------
+
+First, qcow2 image is created. Then it uses kitchen and existing qemu image
+which you're placed somewhere in ~/.config/kitchen-qemu to create an kitchen
+instance. Then, new qcow2 image is being mounted inside temp kitchen VM and OS
+bootstrapping performed using chef recipes.
+
+
 Usage
 -----
 
@@ -22,6 +31,7 @@ Here is the list of OS images that can be built:
 | jessie    | Debian 8          |
 | wheezy    | Debian 7          |
 | trusty    | Ubuntu 14.04 LTS  |
+| xenial    | Ubuntu 16.04 LTS  |
 | freebsd10 | FreeBSD 10        |
 
 For your convenience the repo has a Makefile so you simply type
